@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>ID Card</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                font-family: TimesNewRoman;
+              }
+              .login {
+                position: fixed;
+                top: 50%;
+                left: 45%;
+                transform: translate(-30%, -50%);
+                background: burlywood;
+                padding: 50px;
+                width: 500px;
+                box-shadow: 0px 0px 25px 10px black;
+                border-radius: 15px;
+              }
+              .avatar {
+                font-size: 40px ;
+                background: #cccc00;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                position: fixed;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                border-radius: 20%;
+              }
+              .login h2 {
+                text-align: center;
+                color: white;
+                font-size: 30px;
+                font-family: sans-serif;
+                letter-spacing: 3px;
+                padding-top: 0;
+                margin-top: -20px;
+              }
+              .box-login {
+                  
+                  
+                justify-content:space-between;
+                margin: 10px;
+                
+              }
+              .box-login p{
+                  text-align: left;
+              }
+             
+              .btn-login {
+                margin-left: 10px;
+                margin-bottom: 20px;
+                background: none;
+                border: 1px solid white;
+                width: 92.5%;
+                padding: 10px;
+                color: white;
+                font-size: 18px;
+                letter-spacing: 3px;
+                cursor: pointer;
+                }
+              .btn-login:hover{
+                background: rgba(12, 30, 15, 0.5);
+              }
+              .bottom {
+                margin-left: 10px;
+                margin-right: 10px;
+                display: flex;
+                justify-content: space-between;
+              }
+              .bottom a {
+                color: white;
+                font-size: 15px;
+                text-decoration: none;
+              }
+              .bottom a:hover {
+              text-decoration: underline;
+              }
+              .gmbr{
+                  float: right;
+                  width: 112px;
+                  height: 145px;
+                  
+                    
+              }
+
+            
+    
+        </style>
+    </head>
+    <body>
+        <div class="login">
+            
+                <div class="avatar">
+                    <i class="fa fa-user"></i>
+                </div>
+
+                <h2>Kartu Tanda Penduduk</h2>
+                
+                <div class="box-login">
+                    
+                    <img th:src="${kimg}" class="gmbr"/> 
+                  
+                </div>
+
+                <div class="box-login">
+                    
+                    <p th:text="${knm}"></p>
+                  
+                </div>
+
+                <div class="box-login">
+                    <p th:text="${ktgl}"></p>
+                  
+                </div>
+                
+        </div>
+    </body>
+</html>
